@@ -1,0 +1,53 @@
+@font-face {
+  font-family: quicksand;
+  src: url(font/Quicksand-VariableFont_wght.ttf);
+}
+
+body {
+  --background-color: #fceae1;
+  --orange-color: #e28b49;
+  --red-orange-color: #f06a41;
+  --green-color: #d9d06e;
+  --purple: #f7dbf4;
+  --main-font: #8f685c;
+
+  background-color: var(--background-color);
+  color: var(--main-font);
+}
+.basket_button {
+  background-color: #e28b49;
+  color: #fceae1;
+  font-family: quicksand;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.basket_button:hover {
+  background-color: #f06a41;
+}
+.product_pic {
+  width: 100%;
+  max-width: 350px;
+  display: block;
+  margin: 0 auto;
+}
+.product_info {
+  display: grid;
+  align-items: center;
+}
+h2,
+p,
+h3 {
+  font-family: "moret" serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.divider {
+  margin: 0;
+  width: 100%;
+  height: 45px;
+  background-color: #d9d06e;
+}
