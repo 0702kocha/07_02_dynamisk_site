@@ -1,3 +1,9 @@
+
+@font-face {
+    font-family: quicksand;
+    src: url(font/Quicksand-VariableFont_wght.ttf);
+  }
+
 body {
   --background-color: #fceae1;
   --orange-color: #e28b49;
