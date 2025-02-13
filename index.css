@@ -1,0 +1,90 @@
+body {
+  --background-color: #fceae1;
+  --orange-color: #e28b49;
+  --red-orange-color: #f06a41;
+  --green-color: #d9d06e;
+  --purple: #f7dbf4;
+  --main-font: #8f685c;
+
+  background-color: var(--background-color);
+  color: var(--main-font);
+}
+
+@media (max-width: 768px) {
+  .forsidebillede {
+    max-width: 81%;
+    transform: rotate(-90deg);
+  }
+
+  h1 {
+    color: #f06a41;
+    font-family: "moret",  serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+  }
+
+  h3 {
+    color: white;
+    font-family: quicksand;
+  }
+
+  .favorits {
+    background-color: #f3daef;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .card {
+    background: white;
+    width: 250px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #d67256;
+  }
+  .card img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+  .card h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+  }
+  .card p {
+    color: gray;
+    font-size: 14px;
+  }
+  .price {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .button {
+    background: #d67256;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .stripe {
+    background-color: #d9d06e;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+
+  .vision {
+    background-color: #f06a41;
+  }
+
+  p {
+    color: white;
+  }
+  .photo-with-orange {
+    max-width: 100%;
+  }
+}
