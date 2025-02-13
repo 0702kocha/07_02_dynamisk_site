@@ -10,6 +10,12 @@ body {
   color: var(--main-font);
 }
 
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
   .forsidebillede {
     max-width: 81%;
@@ -108,8 +114,16 @@ body {
 }
 
 @media (min-width: 768px) {
+  .image-container {
+    overflow: hidden;
+    width: 100%;
+  }
+
   .forsidebillede {
-    max-width: 81%;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
     transform: rotate(-90deg);
   }
 
@@ -142,7 +156,9 @@ body {
     background-color: #f3daef;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin-bottom: 70px;
   }
+
   .card {
     background: white;
     width: 250px;
@@ -184,11 +200,20 @@ body {
     display: none;
   }
   .orangepath {
-    position: absolute;
-    top: 2000px; /* Justér placeringen */
-    left: 0;
-    max-width: 80%;
+    position: relative;
+    max-width: 100%;
+    margin-top: -90px;
+    margin-bottom: -230px;
     z-index: 10; /* Sørg for, at den ligger over grid */
+    overflow: hidden;
+  }
+
+  .greenpath {
+    position: relative;
+    max-width: 100%;
+    margin-top: -180px;
+    z-index: 10; /* Sørg for, at den ligger over grid */
+    overflow: hidden;
   }
 
   .grid {
@@ -204,6 +229,7 @@ body {
     width: 100%; /* Sikrer, at de fylder kolonnen */
     object-fit: cover; /* Forhindrer billedstrækning */
     background-color: #f06a41;
+    margin-top: 80px;
   }
 
   p {
