@@ -24,6 +24,14 @@ body {
     text-align: center;
   }
 
+  h2 {
+    color: white;
+    text-align: center;
+    font-family: "moret",  serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
   h3 {
     color: white;
     font-family: quicksand;
@@ -71,13 +79,130 @@ body {
     display: inline-block;
     margin-top: 10px;
   }
-  .stripe {
-    background-color: #d9d06e;
+  .orange-stripe {
+    background-color: #e28b49;
     padding-top: 3px;
     padding-bottom: 3px;
   }
 
+  .orangepath {
+    display: none;
+  }
+
   .vision {
+    background-color: #f06a41;
+    aspect-ratio: 1/1;
+  }
+
+  p {
+    color: white;
+  }
+  .photo-with-orange {
+    max-width: 100%;
+  }
+  .green-stripe {
+    background-color: #d9d06e;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}
+
+@media (min-width: 768px) {
+  .forsidebillede {
+    max-width: 81%;
+    transform: rotate(-90deg);
+  }
+
+  .icon1 {
+    top: 100px;
+    left: 100px;
+  }
+
+  h1 {
+    color: #f06a41;
+    font-family: "moret",  serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+  }
+  h2 {
+    color: white;
+    text-align: center;
+    font-family: "moret",  serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  h3 {
+    color: white;
+    font-family: quicksand;
+  }
+
+  .favorits {
+    background-color: #f3daef;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .card {
+    background: white;
+    width: 250px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #d67256;
+  }
+  .card img {
+    width: 100px;
+    display: block;
+    margin: 0 auto;
+  }
+  .card h2 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+  }
+  .card p {
+    color: gray;
+    font-size: 14px;
+  }
+  .price {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .button {
+    background: #d67256;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .orange-stripe {
+    display: none;
+  }
+  .orangepath {
+    position: absolute;
+    top: 2000px; /* Justér placeringen */
+    left: 0;
+    max-width: 80%;
+    z-index: 10; /* Sørg for, at den ligger over grid */
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    z-index: 1;
+  }
+
+  .vision,
+  .photo-with-orange {
+    aspect-ratio: 1/1; /* Gør dem kvadratiske */
+    width: 100%; /* Sikrer, at de fylder kolonnen */
+    object-fit: cover; /* Forhindrer billedstrækning */
     background-color: #f06a41;
   }
 
@@ -86,5 +211,8 @@ body {
   }
   .photo-with-orange {
     max-width: 100%;
+  }
+  .green-stripe {
+    display: none;
   }
 }
