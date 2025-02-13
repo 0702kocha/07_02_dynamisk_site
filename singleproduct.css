@@ -58,6 +58,10 @@ h3 {
 h3 {
   text-align: center;
 }
+.divider_768px {
+  visibility: hidden;
+  height: 0px;
+}
 @media (width > 768px) {
   .grid_pic_text {
     display: grid;
