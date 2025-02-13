@@ -38,6 +38,10 @@ body {
   display: grid;
   align-items: center;
 }
+.discription_info {
+  display: grid;
+  align-items: center;
+}
 h2,
 p,
 h3 {
@@ -50,4 +54,36 @@ h3 {
   width: 100%;
   height: 45px;
   background-color: #d9d06e;
+}
+h3 {
+  text-align: center;
+}
+@media (width > 768px) {
+  .grid_pic_text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
+  .basket_button {
+    max-width: 250px;
+  }
+
+  .product_pic {
+    grid-row: 1 / 3;
+    grid-column: 1;
+  }
+
+  .product_info {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .description_info {
+    grid-row: 3;
+    grid-column: 1 / -1;
+  }
+  .divider {
+    visibility: hidden;
+  }
 }
