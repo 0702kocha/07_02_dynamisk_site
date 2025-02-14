@@ -5,10 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forside</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="header_footer.css" />
     <link rel="stylesheet" href="https://use.typekit.net/mvo3ooo.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <!-- Burger Menu -->
+      <div>
+        <input type="checkbox" id="burger-toggle" />
+        <label for="burger-toggle" class="burger-menu">☰</label>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="productlist.html">Beauty</a></li>
+            <li><a href="productlist.html">Fragrances</a></li>
+            <li>
+              <a href="index.html" class="logo">
+                <img src="assets/img/logo-favicon/logo.webp" alt="Logo Kocha" />
+              </a>
+            </li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Logo -->
+      <div>
+        <a href="index.html" class="logo2">
+          <img src="assets/img/logo-favicon/logo.webp" alt="Logo Kocha" />
+        </a>
+      </div>
+
+      <!-- Shopping Bag Icon -->
+      <div>
+        <img
+          src="assets/img/Iconer/shopping-bag.svg"
+          alt="Shopping bag"
+          class="shopping-icon"
+        />
+      </div>
+    </header>
     <main>
       <!-- <div class="image-container">
         <img
@@ -98,6 +134,54 @@
         <img src="assets/img/greenpath.png" alt="" />
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <section class="footer-info">
+        <div class="footer-section">
+          <h4>CUSTOMER SERVICE</h4>
+          <p>Questions & answers</p>
+          <p>Returns & complaints</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>TERMS & SECURITY</h4>
+          <p>Terms of service</p>
+          <p>Privacy Policy</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>ABOUT KOCHA</h4>
+          <p>Our vision</p>
+          <p>About the founder</p>
+          <p>Contact us</p>
+        </div>
+      </section>
+
+      <div class="footer-content">
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/img/Iconer/instagram.svg" alt="Instagram" />
+          </a>
+
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/img/Iconer/facebook.svg" alt="Facebook" />
+          </a>
+        </div>
+
+        <div class="footer-logo">
+          <img
+            src="assets/img/logo-favicon/logowhite.webp"
+            alt="Kocha Logo Hvid"
+          />
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
