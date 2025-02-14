@@ -1,0 +1,184 @@
+@font-face {
+  font-family: quicksand;
+  src: url(font/Quicksand-VariableFont_wght.ttf);
+}
+body {
+  margin: 0;
+  font-family: quicksand, sans-serif;
+  padding-top: 100px; /* Justér efter headerens højde */
+}
+
+/***************************** Header *****************************/
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 25px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* header.scrolled {
+  background-color: black;
+} */
+
+.header-image {
+  width: 100%; /* Eller en anden passende bredde */
+  position: absolute;
+  top: 0px; /* Justér så det delvist overlapper */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1; /* Sørger for, at den ligger bag header */
+}
+
+/* Burger-menu knap */
+.burger-menu {
+  font-size: 40px;
+  cursor: pointer;
+  color: #f06a41;
+  display: none; /* Skjules på store skærme */
+}
+
+/* Skjuler checkbox */
+#burger-toggle {
+  display: none;
+}
+
+/* Navigation */
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #f06a41;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Understregningseffekt ved hover */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: #f06a41;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* Logo */
+.logo img {
+  max-width: 150px;
+}
+
+/* Shopping bag ikon */
+.shopping-icon {
+  width: 30px;
+}
+
+/***************************** Footer *****************************/
+footer {
+  background-color: #f06a41;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+footer p {
+  line-height: 12px;
+}
+
+.footer-social img {
+  max-width: 40px;
+  padding-bottom: 20px;
+}
+
+.footer-logo img {
+  max-width: 150px;
+}
+
+.footer-section {
+  padding-bottom: 15px;
+}
+
+/***************************** Mbil *****************************/
+@media (max-width: 768px) {
+  /* Buger menu mobil */
+  .burger-menu {
+    display: block; /* Vis burgerikon på mobil */
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .logo img {
+    max-width: 150px;
+    display: none;
+  }
+
+  .logo2 img {
+    max-width: 150px;
+  }
+
+  /* Når checkboxen er checked, vis menuen */
+  #burger-toggle:checked + .burger-menu + .nav-menu {
+    display: flex;
+  }
+}
+
+/***************************** Desktop *****************************/
+@media (min-width: 769px) {
+  /* Header desktop */
+  header {
+    justify-content: center;
+  }
+
+  .logo2 img {
+    max-width: 200px;
+    display: none;
+  }
+
+  /* Fotter desktop */
+  .footer-info {
+    display: flex;
+  }
+
+  .footer-section {
+    flex: 1;
+  }
+  .footer-social {
+    position: absolute;
+  }
+}
