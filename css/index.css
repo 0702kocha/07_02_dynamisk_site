@@ -153,8 +153,7 @@ main {
     max-width: 100%;
     margin-top: -90px;
     margin-bottom: -230px;
-    z-index: 10; /* Sørg for, at den ligger over grid */
-    overflow: hidden;
+    z-index: 10;
   }
 
   .greenpath {
@@ -162,7 +161,6 @@ main {
     max-width: 100%;
     margin-top: -180px;
     z-index: 10; /* Sørg for, at den ligger over grid */
-    overflow: hidden;
   }
 
   .grid {
@@ -188,6 +186,7 @@ main {
     margin-right: 20px;
     line-height: 2.9;
     word-spacing: 7px;
+    padding-top: 25px;
   }
   .photo-with-orange {
     max-width: 100%;
