@@ -65,6 +65,10 @@ h3 {
   visibility: hidden;
   height: 0px;
 }
+.fixed-icon {
+  visibility: hidden;
+  height: 0px;
+}
 @media (width > 768px) {
   .grid_pic_text {
     display: grid;
@@ -99,5 +103,30 @@ h3 {
   }
   .review {
     margin-top: 150px;
+  }
+  .fixed-icon {
+    visibility: visible;
+    position: fixed;
+    opacity: 0.5;
+    width: 50px;
+    z-index: -1;
+  }
+
+  .left-icon {
+    top: 25%;
+    left: 50px;
+    transform: rotate(-30deg);
+    width: 10px;
+  }
+
+  .right-icon {
+    top: 50%;
+    right: 330px;
+    transform: rotate(10deg);
+  }
+
+  .left-icon img,
+  .right-icon img {
+    width: 350px;
   }
 }
