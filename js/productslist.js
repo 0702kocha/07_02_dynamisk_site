@@ -29,8 +29,12 @@ function showProducts(data) {
               src="${product.images[1] || product.images[0]}"
               alt="Billede af produkt"
             />
-           <p class="discount ${product.discountPercentage > 0 && "IsOnSale"}">-${product.discountPercentage}%</p>
-            <p class="sold-out ${product.stock <= 0 && "IsSoldOut"}">Sold Out</p>
+           <p class="discount ${
+             product.discountPercentage > 0 && "IsOnSale"
+           }">-${product.discountPercentage}%</p>
+            <p class="sold-out ${
+              product.stock <= 0 && "IsSoldOut"
+            }">Sold Out</p>
           
             </a>
           </div>
@@ -38,10 +42,16 @@ function showProducts(data) {
             <a href="singleproduct.html?id=${product.id}" class="product_link">
             <h3 class="productdisplayname">${product.title}</h3>
             <p class="brandname">${product.brand}</p>
-   <p class="price ${product.discountPercentage > 0 ? "discount-price IsOnSale" : ""}">${product.price} $</p>
-            ${product.discountPercentage > 0 ? 
-              `<p class="discount-price IsOnSale">Now ${Math.round(product.price * (1 - product.discountPercentage / 100))} $</p>` 
-              : ""}
+   <p class="price ${
+     product.discountPercentage > 0 ? "discount-price IsOnSale" : ""
+   }">${product.price} $</p>
+            ${
+              product.discountPercentage > 0
+                ? `<p class="discount-price IsOnSale">Now ${Math.round(
+                    product.price * (1 - product.discountPercentage / 100)
+                  )} $</p>`
+                : ""
+            }
        
             </a>
           </div>
