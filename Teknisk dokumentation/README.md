@@ -22,6 +22,8 @@ Beslutte hvordan i vil navngive filer og mapper for at sikre en ensartet struktu
 - Hvordan navngiver I filnavne? (fx små bogstaver, ingen mellemrum, brug af - eller \_)
 - Hvordan sikre I at det er til at forstå hvilke HTML-, CSS- og JavaScript-filer der høre sammen?
 
+Vi benytter kun små bogstaver og har navngivet vores HTML, CSS og Javascript de samme navne, med undtagelse af endelsen som defineres af hvilken slags fil det er, så man tydeligt kan se hvilke der hænger sammen, og hvilke vi hver i ser arbejder i.
+
 ## Link til scripts:
 
 - Hvor placerer I script referencer i HTML'en? (fx i <head> med defer attribute, eller sidst i <body>)
