@@ -73,8 +73,9 @@ p {
   text-align: end;
   padding-right: 30px;
   font-size: 20px;
-  margin-top: -23px;
+  margin-top: -15px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .productdisplayname {
@@ -88,28 +89,131 @@ p {
   padding-left: 10px;
 }
 
-.button {
-  font-size: 13px;
-  padding: 12px;
-  width: 80px;
-  border-radius: 50px;
-  background-color: var(--orange-color);
-  text-align: center;
+.product_link{
+  text-decoration: none;
+  color: var(--main-font);
+}
+
+.product_container:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product_container:hover .productdisplayname,
+.product_container:hover .brandname,
+.product_container:hover .price {
+  color: var(--orange-color);
+}
+
+
+
+.fixed-icon {
+  position: fixed;
+  opacity: 0.5; 
+  width: 50px; 
+  z-index: -1; 
+}
+
+.left-icon {
+  top: 25%;
+  left: 50px; 
+  transform: rotate(-30deg);
+  width: 10px;
+}
+
+.right-icon {
+  top: 50%;
+  right: 330px;
+  transform: rotate(10deg);
+}
+
+.left-icon img,
+.right-icon img {
+  width: 350px;  
+}
+
+
+
+
+
+
+
+
+
+
+/* SOLD OUT */
+.sold-out {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.73);
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.IsSoldOut {
+  visibility: visible;
+}
+
+
+/* Discount */
+
+.product_container:has(.discount-price) .price {
+  text-decoration: line-through;
+  color: #8f685ca4;
+}
+
+.product_container:has(.discount-price) .price::before {
+  content: "Før ";
+}
+
+.discount-price {
+  font-weight: bold;
+}
+
+.image-container {
+  position: relative;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  margin-top: -10px;
-  font-size: 15px;
-  transition: background-color 0.3s ease;
-  font-family: "moret", serif;
+  align-items: center;
 }
 
-.button:hover {
+.discount {
+  position: absolute;
+  visibility: hidden;
+  top: 5%;
+  left: 5%;
   background-color: var(--red-orange-color);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 1px;
+  border-radius: 5px;
 }
 
-.button a {
+
+.discount-single {
+  position: absolute;
+  visibility: hidden;
+  top: -25px;
+  left: 25px;
+  background-color: red;
   color: white;
-  text-decoration: none;
+  font-size: 25px;
   font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+
+.IsOnSale {
+  visibility: visible;
 }
