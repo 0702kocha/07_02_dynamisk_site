@@ -1,7 +1,11 @@
 @font-face {
-  font-family: quicksand;
-  src: url(font/Quicksand-VariableFont_wght.ttf);
+  font-family: "quicksand";
+  src: url("../assets/font/Quicksand-Regular.woff2") format("woff2"),
+    url("../assets/font/Quicksand-Regular.woff") format("woff"),
+    url("../assets/font/Quicksand-Regular.ttf") format("truetype");
+  font-style: normal;
 }
+
 body {
   margin: 0;
   font-family: quicksand, sans-serif;
@@ -40,6 +44,9 @@ header {
   cursor: pointer;
   color: #f06a41;
   display: none; /* Skjules på store skærme */
+  left: 30px;
+  top: 17px;
+  position: absolute;
 }
 
 /* Skjuler checkbox */
@@ -84,13 +91,21 @@ header {
   width: 100%;
 }
 
+.nav-menu li a.logo::after {
+  content: none;
+}
+
 /* Logo */
 .logo img {
-  max-width: 150px;
+  max-width: 200px;
 }
 
 /* Shopping bag ikon */
+
 .shopping-icon {
+  position: absolute;
+  right: 30px;
+  top: 30px;
   width: 30px;
 }
 
@@ -143,6 +158,10 @@ footer p {
     gap: 20px;
   }
 
+  .nav-menu ul li:nth-child(2) {
+    margin-bottom: -20px;
+  }
+
   .logo img {
     max-width: 150px;
     display: none;
@@ -161,13 +180,32 @@ footer p {
 /***************************** Desktop *****************************/
 @media (min-width: 769px) {
   /* Header desktop */
-  header {
-    justify-content: center;
+  .logo2 img {
+    display: none;
   }
 
-  .logo2 img {
-    max-width: 200px;
-    display: none;
+  .nav-menu {
+    display: flex;
+    justify-content: center; /* Centrer menuen */
+    width: 100%; /* Sørger for at menuen fylder hele bredden */
+    position: absolute;
+    left: -75px;
+    margin-top: -10px;
+  }
+
+  .nav-menu ul {
+    gap: 70px;
+    align-items: center;
+  }
+
+  .nav-menu a {
+    font-size: 18px;
+  }
+
+  .shopping-icon {
+    right: 47px;
+    top: 47px;
+    width: 35px;
   }
 
   /* Fotter desktop */
