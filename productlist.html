@@ -9,16 +9,49 @@
   </head>
   <body>
     <header>
-      <!-- MANGLER  -->
+      <!-- Burger Menu -->
+      <div>
+        <input type="checkbox" id="burger-toggle" />
+        <label for="burger-toggle" class="burger-menu">☰</label>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="productlist.html">Beauty</a></li>
+            <li><a href="productlist.html">Fragrances</a></li>
+            <li>
+              <a href="index.html" class="logo">
+                <img src="assets/img/logo-favicon/logo.webp" alt="Logo Kocha" />
+              </a>
+            </li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Logo -->
+      <div>
+        <a href="index.html" class="logo2">
+          <img src="assets/img/logo-favicon/logo.webp" alt="Logo Kocha" />
+        </a>
+      </div>
+
+      <!-- Shopping Bag Icon -->
+      <div>
+        <img
+          src="assets/img/Iconer/shopping-bag.svg"
+          alt="Shopping bag"
+          class="shopping-icon"
+        />
+      </div>
     </header>
 
     <main id="productlist">
       <div class="fixed-icon left-icon">
-        <img src="assets/img/iconer/Artboard 2_11.webp" alt="stjerner" />
+        <img src="assets/img/iconer/Artboard 2_11.webp" alt="stars" />
       </div>
 
       <div class="fixed-icon right-icon">
-        <img src="assets/img/coner/Artboard 2_12.webp" alt="stjerner" />
+        <img src="assets/img/iconer/Artboard 2_12.webp" alt="rainbow" />
       </div>
       <h1 class="product-category"></h1>
       <!-- <label for="filter">Filter by:</label>
@@ -32,7 +65,53 @@
       <section class="product_list_container"></section>
     </main>
     <footer>
-      <!-- MANGLER  -->
+      <section class="footer-info">
+        <div class="footer-section">
+          <h4>CUSTOMER SERVICE</h4>
+          <p>Questions & answers</p>
+          <p>Returns & complaints</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>TERMS & SECURITY</h4>
+          <p>Terms of service</p>
+          <p>Privacy Policy</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>ABOUT KOCHA</h4>
+          <p>Our vision</p>
+          <p>About the founder</p>
+          <p>Contact us</p>
+        </div>
+      </section>
+
+      <div class="footer-content">
+        <div class="footer-social">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/img/iconer/instagram.svg" alt="Instagram" />
+          </a>
+
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="assets/img/iconer/facebook.svg" alt="Facebook" />
+          </a>
+        </div>
+
+        <div class="footer-logo">
+          <img
+            src="assets/img/logo-favicon/logowhite.webp"
+            alt="Kocha Logo Hvid"
+          />
+        </div>
+      </div>
     </footer>
     <script src="js/productslist.js"></script>
   </body>
