@@ -150,7 +150,7 @@ main {
   }
   .orangepath {
     position: relative;
-    max-width: 100%;
+    width: 100%;
     margin-top: -90px;
     margin-bottom: -230px;
     z-index: 10;
@@ -158,7 +158,7 @@ main {
 
   .greenpath {
     position: relative;
-    max-width: 100%;
+    width: 100%;
     margin-top: -180px;
     z-index: 10; /* Sørg for, at den ligger over grid */
   }
