@@ -40,7 +40,7 @@ function showProducts(data) {
             <p class="brandname">${product.brand}</p>
    <p class="price ${product.discountPercentage > 0 ? "discount-price IsOnSale" : ""}">${product.price} $</p>
             ${product.discountPercentage > 0 ? 
-              `<p class="discount-price IsOnSale">Nu DKK ${Math.round(product.price * (1 - product.discountPercentage / 100))},-</p>` 
+              `<p class="discount-price IsOnSale">Now ${Math.round(product.price * (1 - product.discountPercentage / 100))} $</p>` 
               : ""}
        
             </a>
