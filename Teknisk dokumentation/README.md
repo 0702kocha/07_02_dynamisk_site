@@ -28,9 +28,13 @@ Vi benytter kun små bogstaver og har navngivet vores HTML, CSS og Javascript de
 
 - Hvor placerer I script referencer i HTML'en? (fx i <head> med defer attribute, eller sidst i <body>)
 
+Vi ligger den alle i bunden, som vi først har lært.
+
 ## Git branches:
 
 - Hvordan navngiver I branches, så alle kan forstår hvem der arbejder i branchen og på hvad?(fx feature-lotte-formular)
+
+Vi har
 
 ## Arbejdsflow:
 

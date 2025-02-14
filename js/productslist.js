@@ -24,7 +24,7 @@ function showProducts(data) {
         <article class="product_container">
       
           <div class="image-container">
-          <a href="produkt.html?id=${product.id}" class="product_link">
+          <a href="singleproduct.html?id=${product.id}" class="product_link">
             <img
               src="${product.images[1] || product.images[0]}"
               alt="Billede af produkt"
@@ -35,7 +35,7 @@ function showProducts(data) {
             </a>
           </div>
           <div>
-            <a href="produkt.html?id=${product.id}" class="product_link">
+            <a href="singleproduct.html?id=${product.id}" class="product_link">
             <h3 class="productdisplayname">${product.title}</h3>
             <p class="brandname">${product.brand}</p>
    <p class="price ${product.discountPercentage > 0 ? "discount-price IsOnSale" : ""}">${product.price} $</p>
