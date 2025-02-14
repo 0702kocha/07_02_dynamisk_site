@@ -11,8 +11,11 @@ body {
 }
 
 @font-face {
-  font-family: quicksand;
-  src: url(../assets/font/Quicksand-VariableFont_wght.ttf);
+  font-family: "quicksand";
+  src: url("../assets/font/Quicksand-Regular.woff2") format("woff2"),
+    url("../assets/font/Quicksand-Regular.woff") format("woff"),
+    url("../assets/font/Quicksand-Regular.ttf") format("truetype");
+  font-style: normal;
 }
 main {
   width: 100%;
@@ -57,6 +60,7 @@ main {
   .icon1,
   .icon2 {
     width: 50px;
+    height: 50px;
   }
 
   .orange-stripe {
@@ -114,7 +118,8 @@ main {
 
   .icon1,
   .icon2 {
-    width: 100px;
+    width: 70px;
+    height: 70px;
   }
 
   h1 {
