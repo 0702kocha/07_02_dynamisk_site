@@ -1,8 +1,7 @@
-
 @font-face {
-    font-family: quicksand;
-    src: url(font/Quicksand-VariableFont_wght.ttf);
-  }
+  font-family: quicksand;
+  src: url(font/Quicksand-VariableFont_wght.ttf);
+}
 
 body {
   --background-color: #fceae1;
@@ -40,8 +39,8 @@ p {
   margin-right: 50px;
 }
 
-.product-category{
-text-align: center;
+.product-category {
+  text-align: center;
 }
 
 .product_list_container {
@@ -114,5 +113,3 @@ text-align: center;
   text-decoration: none;
   font-weight: bold;
 }
-
-
