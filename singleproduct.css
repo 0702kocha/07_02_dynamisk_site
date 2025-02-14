@@ -90,4 +90,10 @@ h3 {
   .divider {
     visibility: hidden;
   }
+  .divider_768px {
+    visibility: visible;
+  }
+  .review {
+    margin-top: 150px;
+  }
 }
