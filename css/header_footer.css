@@ -20,14 +20,17 @@ header {
   width: 100%;
   z-index: 1000;
   padding: 25px 0px;
+  padding-bottom: 25px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: background 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
 }
 
-/* header.scrolled {
-  background-color: black;
-} */
+header.scrolled {
+  background: rgba(252, 234, 226, 0.8);
+  backdrop-filter: blur(1px);
+}
 
 .header-image {
   width: 100%; /* Eller en anden passende bredde */
@@ -141,13 +144,19 @@ footer p {
     display: block; /* Vis burgerikon på mobil */
   }
 
+  header.menu-open {
+    background: rgba(252, 234, 226, 0.8);
+    backdrop-filter: blur(1px);
+  }
+
   .nav-menu {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 85px;
+    top: 95px;
     left: 0;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(252, 234, 226, 0.8);
+    backdrop-filter: blur(1px);
     width: 100%;
     text-align: center;
   }
@@ -180,6 +189,11 @@ footer p {
 /***************************** Desktop *****************************/
 @media (min-width: 769px) {
   /* Header desktop */
+  header {
+    padding-top: 25px;
+    padding-bottom: 80px;
+  }
+
   .logo2 img {
     display: none;
   }
