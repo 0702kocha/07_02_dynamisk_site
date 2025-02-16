@@ -24,10 +24,17 @@ main {
 }
 
 @media (max-width: 768px) {
-  /* .forsidebillede {
-    max-width: 81%;
+  .forsidebillede {
+    width: 100%; /* Fylder hele bredden af skærmen */
+    height: 100%; /* Juster højden - kan ændres efter behov */
+    display: block;
+    position: absolute; /* Placerer billedet præcist */
+    top: -80px; /* Sørger for, at det ligger øverst */
+    left: 0;
+    object-fit: cover; /* Sikrer, at billedet beskæres korrekt */
     transform: rotate(-90deg);
-  } */
+    z-index: -1; /* Placerer det bag andre elementer, hvis nødvendigt */
+  }
 
   h1 {
     color: #f06a41;
@@ -53,8 +60,9 @@ main {
   .icon-container {
     display: flex;
     justify-content: space-between;
-    padding: 50px;
+    padding: 18px;
     box-sizing: border-box;
+    background-color: #fceae1;
   }
 
   .icon1,
@@ -65,8 +73,28 @@ main {
 
   .orange-stripe {
     background-color: #e28b49;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding: 5px 0;
+    overflow: hidden; /* Sikrer, at teksten ikke går udenfor */
+    white-space: nowrap;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 10s linear infinite;
+    width: max-content; /* Sørger for, at teksten ikke afkortes */
+  }
+
+  @keyframes scrollText {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
   }
 
   .orangepath {
@@ -79,6 +107,7 @@ main {
   .vision {
     background-color: #f06a41;
     aspect-ratio: 1/1;
+    padding-top: 10px;
   }
 
   .main-text {
@@ -88,32 +117,44 @@ main {
     margin-right: 20px;
     line-height: 1.9;
     word-spacing: 5px;
+    padding-bottom: 20px;
   }
+
   .photo-with-orange {
     max-width: 100%;
   }
+
   .green-stripe {
     background-color: #d9d06e;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    padding: 5px 0;
+    overflow: hidden; /* Sikrer, at teksten ikke går udenfor */
+    white-space: nowrap;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
 }
 
 @media (min-width: 768px) {
-  /* .forsidebillede {
-    width: 100%;
-    max-width: 100%;
+  .forsidebillede {
+    width: 100vw; /* Fylder hele bredden af skærmen */
+    height: 200vh; /* Juster højden - kan ændres efter behov */
     display: block;
-    margin: 0 auto;
+    position: absolute; /* Placerer billedet præcist */
+    top: -80px; /* Sørger for, at det ligger øverst */
+    left: 0;
+    object-fit: cover; /* Sikrer, at billedet beskæres korrekt */
     transform: rotate(-90deg);
-  } */
+    z-index: -1; /* Placerer det bag andre elementer, hvis nødvendigt */
+  }
 
   .icon-container {
     display: flex;
     justify-content: space-between;
-
-    padding: 50px;
+    margin-top: 580px;
+    padding: 30px;
     box-sizing: border-box;
+    background-color: #fceae1;
   }
 
   .icon1,
@@ -168,6 +209,8 @@ main {
     grid-template-columns: 1fr 1fr;
     position: relative;
     z-index: 1;
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 
   .vision,
@@ -213,8 +256,8 @@ main {
   gap: 30px;
   justify-content: center;
   background-color: var(--purple);
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 70px;
+  padding-bottom: 88px;
 }
 
 .product_container {
