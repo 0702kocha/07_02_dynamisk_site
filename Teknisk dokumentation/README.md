@@ -34,13 +34,15 @@ Vi ligger den alle i bunden, som vi først har lært.
 
 - Hvordan navngiver I branches, så alle kan forstår hvem der arbejder i branchen og på hvad?(fx feature-lotte-formular)
 
-Vi har
+Vi har sørget for at navne give det som branchena arbejder på, samt navn, således man har overblik over hvilken person den høre til.
 
 ## Arbejdsflow:
 
 - Hvordan fordeler I arbejdet, så I undgår at flere arbejder i de samme filer samtidigt?
 - Hvordan sikrer I, at commit-beskeder er beskrivende?
 - Hvordan kommunikerer i om ændringer i main branchen når feature merges?
+
+Vi har hver især arbejdet på forskellige aspekter af siden. En har arbejdet på index.html, en på productlist.html, en på singleproduct.html og en på header_footer.html. Derudover har folk også arbejdet med deres egen css og js, således at vi ikke kom til at arbejde oven i hinandens.
 
 ## Kode:
 
@@ -58,11 +60,17 @@ Dette afsnit skal forklare hvad I konkret har arbejde med, for at udvikle websit
 
 Brug korte beskrivelser, som i eksemplerne herover
 
+- Hentning af produkter fra API
+- Filtrering ud fra pris (hvis vi når at få det til at fungere)
+- dynamisk visning af produkter i HTML
+
 # API endpoints
 
 Dette afsnit skal liste de endpoints fra API'et i har benyttet:
 
 - (fx. https://dummyjson.com/products)
+
+- https://dummyjson.com/products?category=${mycategory}
 
 # Dokumentation af Funktion
 
@@ -81,3 +89,79 @@ function voresFunktion(sprog) {
 //hvordan funktionen kaldes:
 voresFunktion("JavaScript");
 ```
+
+Funktionen henter en liste af produkter fra en API (et eksternt websted), baseret på den kategori, der er valgt i URL'en. Den viser produkterne på en webside, så brugeren kan se billeder, priser og rabatter. Koden sørger for, at produkterne vises på siden automatisk.
+
+Funktionen returnerer ikke noget. Den opdaterer bare siden ved at vise produkterne i en liste.
+
+category: Dette er den kategori, som vi henter fra URL'en. For eksempel kan URL'en se sådan ud: ?category=beauty. Denne værdi bruges til at hente de rigtige produkter fra API'et.
+
+// Her henter vi kategorien via URL'en, så vi kan bruge eks ?category=beauty
+const mycategory = new URLSearchParams(window.location.search).get("category");
+
+// Finder de html elementer der skal bruges i js
+const ListContainer = document.querySelector(".product_list_container");
+const overskrift = document.querySelector("h1");
+
+// Sørger for at vores overskrift viser den valgte kategori
+overskrift.innerHTML = mycategory;
+
+// Henter api dataen
+fetch(`https://dummyjson.com/products?category=${mycategory}`)
+.then((response) => response.json())
+.then(showProducts);
+
+function showProducts(data) {
+console.log(data);
+
+// Laver html til hvert enkelt produkt
+const markup = data.products
+.map(
+(product) => `
+
+        <article class="product_container">
+
+          <div class="image-container">
+          <a href="singleproduct.html?id=${product.id}" class="product_link">
+            <img
+              src="${product.images[1] || product.images[0]}"
+              alt="Billede af produkt"
+            />
+           <p class="discount ${
+             product.discountPercentage > 0 && "IsOnSale"
+           }">-${product.discountPercentage}%</p>
+            <p class="sold-out ${
+              product.stock <= 0 && "IsSoldOut"
+            }">Sold Out</p>
+
+            </a>
+          </div>
+          <div>
+            <a href="singleproduct.html?id=${product.id}" class="product_link">
+            <h3 class="productdisplayname">${product.title}</h3>
+            <p class="brandname">${product.brand}</p>
+
+   <p class="price ${
+     product.discountPercentage > 0 ? "discount-price IsOnSale" : ""
+   }">${product.price} $</p>
+            ${
+              product.discountPercentage > 0
+                ? `<p class="discount-price IsOnSale">Now ${Math.round(
+                    product.price * (1 - product.discountPercentage / 100)
+                  )} $</p>`
+                : ""
+            }
+       
+            </a>
+          </div>
+        </article>
+  
+      `
+    )
+    .join("");
+
+// Logger den færdige HTML så vi kan se hvad der bliver sat ind
+console.log(markup);
+// Indsætter det i det færdige html i elementet
+ListContainer.innerHTML = markup;
+}

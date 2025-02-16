@@ -9,7 +9,7 @@ const overskrift = document.querySelector("h1");
 overskrift.innerHTML = mycategory;
 
 // Henter api dataen
-fetch(`https://dummyjson.com/products`)
+fetch(`https://dummyjson.com/products?category=${mycategory}`)
   .then((response) => response.json())
   .then(showProducts);
 
@@ -66,3 +66,6 @@ function showProducts(data) {
   // Indsætter det i det færdige html i elementet
   ListContainer.innerHTML = markup;
 }
+
+
+
