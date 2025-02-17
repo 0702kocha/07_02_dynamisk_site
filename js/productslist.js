@@ -68,4 +68,28 @@ function showProducts(data) {
 }
 
 
+// FILTER FUNKTION
 
+const filterSelect = document.querySelector(".filter");
+
+filterSelect.addEventListener("change", function() {
+    fetch(`https://dummyjson.com/products?category=${mycategory}`)
+        .then((response) => response.json())
+        .then((data) => {
+            let filteredProducts = [...data.products];
+
+            switch(this.value) {
+                case "low-to-high":
+                    filteredProducts.sort((a, b) => a.price - b.price);
+                    break;
+                case "high-to-low":
+                    filteredProducts.sort((a, b) => b.price - a.price);
+                    break;
+                case "under-10":
+                    filteredProducts = filteredProducts.filter(product => product.price < 10);
+                    break;
+            }
+            
+            showProducts({products: filteredProducts});
+        });
+});
