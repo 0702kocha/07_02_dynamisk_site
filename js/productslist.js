@@ -29,9 +29,9 @@ function showProducts(data) {
               src="${product.images[1] || product.images[0]}"
               alt="Billede af produkt"
             />
-           <p class="discount ${
-             product.discountPercentage > 0 && "IsOnSale"
-           }">-${product.discountPercentage}%</p>
+           <p class="discount ${product.discountPercentage > 0 && "IsOnSale"}">
+  -${Math.ceil(product.discountPercentage)}%
+</p>
             <p class="sold-out ${
               product.stock <= 0 && "IsSoldOut"
             }">Sold Out</p>
@@ -45,13 +45,9 @@ function showProducts(data) {
    <p class="price ${
      product.discountPercentage > 0 ? "discount-price IsOnSale" : ""
    }">${product.price} $</p>
-            ${
-              product.discountPercentage > 0
-                ? `<p class="discount-price IsOnSale">Now ${Math.round(
-                    product.price * (1 - product.discountPercentage / 100)
-                  )} $</p>`
-                : ""
-            }
+   ${product.discountPercentage > 0 
+    ? `<p class="discount-price IsOnSale">Now ${Math.floor(product.price * (1 - product.discountPercentage / 100))} $</p>` 
+    : ""}
        
             </a>
           </div>
