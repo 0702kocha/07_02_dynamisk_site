@@ -1,7 +1,7 @@
 @font-face {
   font-family: "quicksand";
-  src: url("../assets/font/Quicksand-Regular.woff2") format("woff2"),
-    url("../assets/font/Quicksand-Regular.woff") format("woff"),
+  src: url("../assets/font/Quicksand-Bold.woff2") format("woff2"),
+    url("../assets/font/Quicksand-Bold.woff") format("woff"),
     url("../assets/font/Quicksand-Regular.ttf") format("truetype");
   font-style: normal;
 }
@@ -72,7 +72,7 @@ header.scrolled {
 .nav-menu a {
   text-decoration: none;
   color: #f06a41;
-  font-weight: bold;
+  font-weight: 400; /* Gør teksten tyndere */
   position: relative;
   transition: color 0.3s ease-in-out;
 }
@@ -122,6 +122,7 @@ footer {
 
 footer p {
   line-height: 12px;
+  font-size: 14px;
 }
 
 .footer-social img {
