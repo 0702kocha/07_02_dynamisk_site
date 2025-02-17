@@ -40,10 +40,12 @@ body {
 .product_info {
   display: grid;
   align-items: center;
+  margin-left: 10px;
 }
-.discription_info {
+.description_info {
   display: grid;
   align-items: center;
+  margin-left: 10px;
 }
 h2,
 p,
@@ -94,6 +96,7 @@ h3 {
     grid-row: 3;
     grid-column: 1 / -1;
     max-width: 600px;
+    margin-left: 30px;
   }
   .divider {
     visibility: hidden;
@@ -113,8 +116,8 @@ h3 {
   }
 
   .left-icon {
-    top: 25%;
-    left: 50px;
+    top: 30%;
+    left: 5px;
     transform: rotate(-30deg);
     width: 10px;
   }
@@ -127,6 +130,6 @@ h3 {
 
   .left-icon img,
   .right-icon img {
-    width: 350px;
+    width: 250px;
   }
 }
