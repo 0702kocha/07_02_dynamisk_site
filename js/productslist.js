@@ -70,7 +70,7 @@ function showProducts(data) {
 const filterSelect = document.querySelector(".filter");
 
 filterSelect.addEventListener("change", function() {
-    fetch(`https://dummyjson.com/products?category=${mycategory}`)
+    fetch(`https://dummyjson.com/products/category/${mycategory}`)
         .then((response) => response.json())
         .then((data) => {
             let filteredProducts = [...data.products];
