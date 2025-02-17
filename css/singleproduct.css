@@ -5,6 +5,13 @@
     url("../assets/font/Quicksand-Regular.ttf") format("truetype");
   font-style: normal;
 }
+@font-face {
+  font-family: "moret";
+  src: url("../assets/font/Moret-Regular.woff2") format("woff2"),
+    url("../assets/font/Moret-Regular.woff") format("woff"),
+    url("../assets/font/Moret-Regular.otf") format("truetype");
+  font-style: normal;
+}
 
 body {
   --background-color: #fceae1;
