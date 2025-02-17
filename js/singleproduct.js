@@ -1,39 +1,84 @@
 const productId = new URLSearchParams(window.location.search).get("id");
 const productContainer = document.querySelector(".product_container");
+let currentProductData;
+
+// Fetch product data
 fetch(`https://dummyjson.com/products/${productId}`)
-  .then((Response) => Response.json())
-  .then(showProduct);
+  .then((response) => response.json())
+  .then((data) => {
+    currentProductData = data;
+    showProduct(data);
+  });
 
 function showProduct(data) {
-  productContainer.innerHTML = ` <div class="grid_pic_text">
-          <img
-            class="product_pic"
-            src="https://dummyjson.com/products/${productId}"
-            alt="Picture of product"
-          />
-
-          <div class="product_info">
-            <h2 class="product_titel">${product.titel}</h2>
-            <p>${product.brand}</p>
-            <p>${product.price}</p>
-            <button class="basket_button">Add to basket</button>
-          </div>
-
-          <div class="description_info">
-            <h2>Description</h2>
-            <p>
-            ${product.description}
-            </p>
-          </div>
+  // Produkt info
+  let html = `
+        <div class="grid_pic_text">
+            <img
+                class="product_pic"
+                src="${data.thumbnail}"
+                alt="Picture of ${data.title}"
+            />
+            <div class="product_info">
+                <h2 class="product_titel">${data.title}</h2>
+                <p>${data.brand}</p>
+                <p>${data.price} kr.</p>
+                <button class="basket_button">Add to basket</button>
+            </div>
+            <div class="description_info">
+                <h2>Description</h2>
+                <p>${data.description}</p>
+            </div>
         </div>
         <div class="divider"></div>
         <div class="divider_768px">
-          <img src="assets/img/greenLineNoText.svg" alt="Green Path" />
+            <img src="assets/img/greenLineNoText.svg" alt="Green Path" />
         </div>
-        <h3>Reviews</h3>
-        <div class="review">
-          <p>${product.reviewerName}</p>
-          <p>${product.comment}</p>
-          <p>${product.rating}</p>
-        </div>`;
+        <h3>Reviews</h3>`;
+
+  // Tilføj reviews fra API data
+  data.reviews.forEach((review) => {
+    html += `
+            <div class="review">
+                <div class="review-header">
+                    <p class="reviewer-name">${review.reviewerName}</p>
+                    <div class="rating">${"⭐".repeat(review.rating)}</div>
+                </div>
+                <p class="review-comment">${review.comment}</p>
+                <p class="review-date">${new Date(
+                  review.date
+                ).toLocaleDateString()}</p>
+            </div>
+        `;
+  });
+
+  // Tilføj review form
+  html += `
+        <div class="add-review">
+            <h4>Add a Review</h4>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating:</label>
+                    <select id="rating" required>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" required></textarea>
+                </div>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    `;
+
+  productContainer.innerHTML = html;
 }
