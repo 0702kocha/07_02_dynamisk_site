@@ -20,7 +20,7 @@ function showProducts(data) {
         <article class="product_container">
       
           <div class="image-container">
-          <a href="produkt.html?id=${product.id}" class="product_link">
+          <a href="singleproduct.html?id=${product.id}" class="product_link">
             <img
               src="${product.images[1] || product.images[0]}"
               alt="Billede af produkt"
@@ -62,35 +62,3 @@ function showProducts(data) {
   // Indsætter det i det færdige html i elementet
   ListContainer.innerHTML = markup;
 }
-
-//DETTE ER FRA DEN TIDLIGERE OPGAVE I FORHOLD TIL NAVIGATIONS MENUEN//
-// const categoriesContainer = document.querySelector(".category_list_container");
-
-// fetch(`https://kea-alt-del.dk/t7/api/categories/`)
-//   .then((response) => response.json())
-//   .then((data) => showList(data));
-
-// function showList(categories) {
-//   console.log("min data er:", categories);
-//   const markup = categories
-//     .map(
-//       (category) => `
-//         <a href="produktliste.html?category=${category.category}" class="category-link">${category.category}</a>`
-//     )
-//     .join("");
-//   console.log("min markup er", markup);
-//   categoriesContainer.innerHTML = markup;
-// }
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const navLinks = document.querySelectorAll(".nav-links a");
-
-//   navLinks.forEach((link) => {
-//     link.addEventListener("click", function (event) {
-//       event.preventDefault();
-
-//       const category = link.textContent.trim().toLowerCase();
-//       window.location.href = `produktliste.html?category=${category}`;
-//     });
-//   });
-// });
