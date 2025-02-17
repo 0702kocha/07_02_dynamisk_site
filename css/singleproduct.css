@@ -70,9 +70,8 @@ body {
 h3 {
   text-align: center;
 }
-.divider_768px {
-  visibility: hidden;
-  height: 0px;
+#divider_768px {
+  display: none;
 }
 .fixed-icon {
   visibility: hidden;
@@ -113,8 +112,8 @@ h3 {
   .divider {
     visibility: hidden;
   }
-  .divider_768px {
-    visibility: visible;
+  #divider_768px {
+    display: block;
     position: relative;
     width: 100%;
   }
