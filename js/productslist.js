@@ -46,8 +46,9 @@ function showProducts(data) {
      product.discountPercentage > 0 ? "discount-price IsOnSale" : ""
    }">${product.price} $</p>
    ${product.discountPercentage > 0 
-    ? `<p class="discount-price IsOnSale">Now ${Math.floor(product.price * (1 - product.discountPercentage / 100))} $</p>` 
+    ? `<p class="discount-price IsOnSale">Now ${Math.floor((product.price * (1 - product.discountPercentage / 100)) / 0.5) * 0.5} $</p>` 
     : ""}
+
        
             </a>
           </div>
