@@ -35,9 +35,9 @@ body {
   border: none;
   border-radius: 50px;
   padding: 15px;
-
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 50%;
 }
 .basket_button:hover {
   background-color: #f06a41;
@@ -67,6 +67,7 @@ body {
   width: 100%;
   height: 45px;
   background-color: #d9d06e;
+  overflow: hidden;
 }
 h3 {
   text-align: center;
