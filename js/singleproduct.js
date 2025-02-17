@@ -16,13 +16,13 @@ function showProduct(data) {
         <div class="grid_pic_text">
             <img
                 class="product_pic"
-                src="${data.thumbnail}"
+                src="${data.images[1] || data.images[0]}"
                 alt="Picture of ${data.title}"
             />
             <div class="product_info">
                 <h2 class="product_titel">${data.title}</h2>
                 <p>${data.brand}</p>
-                <p>${data.price} kr.</p>
+                <p>${data.price}</p>
                 <button class="basket_button">Add to basket</button>
             </div>
             <div class="description_info">
@@ -38,6 +38,10 @@ function showProduct(data) {
 
   // Tilføj reviews fra API data
   data.reviews.forEach((review) => {
+    let starImage =
+      '<img src="assets/img/Iconer/star.svg" alt="star" class="star-icon">'.repeat(
+        review.rating
+      );
     html += `
             <div class="review">
                 <div class="review-header">
