@@ -35,15 +35,21 @@ function showProducts(data) {
             </a>
           </div>
           <div>
-            <a href="produkt.html?id=${product.id}" class="product_link">
+           <a href="singleproduct.html?id=${product.id}" class="product_link">
             <h3 class="productdisplayname">${product.title}</h3>
             <p class="brandname">${product.brand}</p>
    <p class="price ${
      product.discountPercentage > 0 ? "discount-price IsOnSale" : ""
    }">${product.price} $</p>
-   ${product.discountPercentage > 0 
-    ? `<p class="discount-price IsOnSale">Now ${Math.floor((product.price * (1 - product.discountPercentage / 100)) / 0.5) * 0.5} $</p>` 
-    : ""}
+   ${
+     product.discountPercentage > 0
+       ? `<p class="discount-price IsOnSale">Now ${
+           Math.floor(
+             (product.price * (1 - product.discountPercentage / 100)) / 0.5
+           ) * 0.5
+         } $</p>`
+       : ""
+   }
        
             </a>
           </div>
