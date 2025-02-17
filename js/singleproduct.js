@@ -42,7 +42,7 @@ function showProduct(data) {
             <div class="review">
                 <div class="review-header">
                     <p class="reviewer-name">${review.reviewerName}</p>
-                    <div class="rating">${"⭐".repeat(review.rating)}</div>
+                    <div class="rating">${"scr="../assets/img/Iconer/repeat(review.rating)}</div>
                 </div>
                 <p class="review-comment">${review.comment}</p>
                 <p class="review-date">${new Date(
