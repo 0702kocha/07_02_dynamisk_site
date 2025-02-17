@@ -1,5 +1,6 @@
 const productId = new URLSearchParams(window.location.search).get("id");
 const productContainer = document.querySelector(".product_container");
+const reviewContainer = document.querySelector(".review_container");
 let currentProductData;
 
 // Fetch product data
@@ -8,6 +9,7 @@ fetch(`https://dummyjson.com/products/${productId}`)
   .then((data) => {
     currentProductData = data;
     showProduct(data);
+    showReviews(data.reviews);
   });
 
 function showProduct(data) {
@@ -48,53 +50,57 @@ function showProduct(data) {
           alt="Green Path"
         />
         <h3>Reviews</h3>`;
+  productContainer.innerHTML = html;
+}
+function showReviews(reviews) {
+  let html = "";
 
   // Tilføj reviews fra API data
-  data.reviews.forEach((review) => {
+  reviews.forEach((review) => {
     let starImage =
       '<img src="assets/img/Iconer/star.svg" alt="star" class="star-icon">'.repeat(
         review.rating
       );
     html += `
-            <div class="review">
-                <div class="review-header">
-                <div class="rating">${starImage}</div>
-                    <p class="reviewer-name">${review.reviewerName}</p>
+        <div class="review">
+        <div class="review-header">
+        <div class="rating">${starImage}</div>
+        <p class="reviewer-name">${review.reviewerName}</p>
                 <p class="review-comment">${review.comment}</p>
                 <p class="review-date">${new Date(
                   review.date
                 ).toLocaleDateString()}</p>
-            </div>
-        `;
+                </div>
+                `;
   });
 
   // Tilføj review form
   html += `
-        <div class="add-review">
+            <div class="add-review">
             <h4>Add a Review</h4>
             <form id="reviewForm">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="rating">Rating:</label>
-                    <select id="rating" required>
-                        <option value="5">5 Stars</option>
-                        <option value="4">4 Stars</option>
-                        <option value="3">3 Stars</option>
-                        <option value="2">2 Stars</option>
+            <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+            <label for="rating">Rating:</label>
+            <select id="rating" required>
+            <option value="5">5 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="2">2 Stars</option>
                         <option value="1">1 Star</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="comment">Comment:</label>
-                    <textarea id="comment" required></textarea>
-                </div>
-                <button type="submit">Submit Review</button>
-            </form>
-        </div>
-    `;
+                        </select>
+                        </div>
+                        <div class="form-group">
+                        <label for="comment">Comment:</label>
+                        <textarea id="comment" required></textarea>
+                        </div>
+                        <button type="submit">Submit Review</button>
+                        </form>
+                        </div>
+                        `;
 
-  productContainer.innerHTML = html;
+  reviewContainer.innerHTML = html;
 }

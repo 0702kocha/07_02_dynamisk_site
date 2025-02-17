@@ -164,11 +164,9 @@ h3 {
   .right-icon img {
     width: 250px;
   }
-  .review {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
+  .review_container {
+    display: flex;
+    gap: 10px;
   }
   .main {
     border: #8f685c solid 2px;
