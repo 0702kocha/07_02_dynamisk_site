@@ -9,10 +9,10 @@ const overskrift = document.querySelector("h1");
 overskrift.innerHTML = mycategory;
 
 // Henter api dataen
-fetch(`https://dummyjson.com/products?category=${mycategory}`)
+fetch(`https://dummyjson.com/products/category/${mycategory}`)
   .then((response) => response.json())
   .then(showProducts);
-
+  
 function showProducts(data) {
   console.log(data);
 
