@@ -54,12 +54,9 @@ body {
   align-items: center;
   margin-left: 10px;
 }
-h2,
-p,
-h3 {
-  font-family: "moret" serif;
-  font-weight: 400;
-  font-style: normal;
+
+.product_titel {
+  font-family: "moret", serif;
 }
 .divider {
   margin: 0;
