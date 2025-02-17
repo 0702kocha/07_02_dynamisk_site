@@ -20,4 +20,5 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-  
+
+// GØR SITE DYNAMISK
