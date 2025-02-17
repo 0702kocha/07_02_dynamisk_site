@@ -11,8 +11,8 @@
 @font-face {
   font-family: "moret";
   src: url("../assets/font/Moret-Regular.woff2") format("woff2"),
-       url("../assets/font/Moret-Regular.woff2") format("woff"),
-       url("../assets/font/Moret-Regular.woff2") format("truetype");  
+       url("../assets/font/Moret-Regular.woff") format("woff"),
+       url("../assets/font/Moret-Regular.otf") format("truetype");  
   font-style: normal;
 }
 
