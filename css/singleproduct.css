@@ -107,6 +107,8 @@ h3 {
   }
   .divider_768px {
     visibility: visible;
+    position: relative;
+    width: 100%;
   }
   .review {
     margin-top: 150px;
