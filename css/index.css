@@ -57,6 +57,30 @@ main {
     background-color: #fceae1;
   }
 
+  /* .header-text {
+    position: relative;
+    bottom: -40px;
+    left: 20px;
+    color: white;
+  } */
+
+  h4 {
+    color: white;
+    font-family: "moret",  serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    line-height: 0;
+  }
+  h5 {
+    color: white;
+    font-family: "moret",  serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.5rem;
+    line-height: 0;
+  }
+
   .icon1,
   .icon2 {
     width: 50px;
@@ -135,6 +159,23 @@ main {
     padding: 30px;
     box-sizing: border-box;
     background-color: #fceae1;
+  }
+
+  h4 {
+    color: white;
+    font-family: "moret",  serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3.1rem;
+    line-height: 0;
+  }
+  h5 {
+    color: white;
+    font-family: "moret",  serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 2.1rem;
+    line-height: 0;
   }
 
   .icon1,
@@ -243,7 +284,6 @@ main {
 .product_container {
   border-radius: 15px;
   display: grid;
-  grid-template-rows: subgrid;
   grid-row: span 3;
   gap: 0;
   border: 3px solid var(--red-orange-color);
