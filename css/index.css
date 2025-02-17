@@ -24,6 +24,11 @@ main {
   overflow: hidden;
 }
 
+p {
+  font-family: quicksand;
+  font-weight: 800;
+}
+
 @media (max-width: 768px) {
   h1 {
     color: #f06a41;
@@ -152,6 +157,28 @@ main {
     position: relative;
     margin-top: 30px;
     margin-bottom: 30px;
+  }
+
+  .product_container:nth-child(n + 2) {
+    display: none;
+  }
+
+  .product_list_container {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto; /* Vandret scroll */
+    scroll-snap-type: x mandatory; /* Glat scroll */
+    padding-bottom: 10px;
+  }
+
+  .product_container {
+    flex: 0 0 80%; /* Gør hvert produkt lidt mindre end viewport */
+    scroll-snap-align: center; /* Centrer hvert produkt */
+    min-width: 80%;
+  }
+
+  .product_list_container::-webkit-scrollbar {
+    display: none; /* Skjul scrollbar på mobil */
   }
 }
 
