@@ -39,6 +39,8 @@ header.scrolled {
   left: 50%;
   transform: translateX(-50%);
   z-index: -1; /* Sørger for, at den ligger bag header */
+  object-fit: cover; /* Sikrer at billedet fylder sin container uden at forvrænge */
+  max-height: 85%; /* Justér efter behov */
 }
 
 /* Burger-menu knap */
