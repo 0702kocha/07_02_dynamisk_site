@@ -136,7 +136,7 @@ h3 {
   .right-icon img {
     width: 250px;
   }
-  .review {
+  .review_container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;

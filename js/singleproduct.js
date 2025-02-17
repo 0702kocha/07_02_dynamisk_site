@@ -31,9 +31,8 @@ function showProduct(data) {
             </div>
         </div>
         <div class="divider"></div>
-        <div class="divider_768px">
-            <img src="assets/img/greenLineNoText.svg" alt="Green Path" />
-        </div>
+            <img class=class="divider_768px" src="assets/img/greenLineNoText.svg" alt="Green Path" />
+        
         <h3>Reviews</h3>`;
 
   // Tilføj reviews fra API data
