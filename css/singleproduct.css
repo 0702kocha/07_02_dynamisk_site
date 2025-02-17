@@ -136,9 +136,6 @@ h3 {
     position: relative;
     width: 100%;
   }
-  .review {
-    margin-top: 150px;
-  }
   .fixed-icon {
     visibility: visible;
     position: fixed;
@@ -167,8 +164,22 @@ h3 {
   .review_container {
     display: flex;
     gap: 10px;
+    justify-content: space-evenly;
   }
   .main {
     border: #8f685c solid 2px;
+  }
+  .add_review {
+    text-align: center;
+  }
+  .grid_review_form {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    padding-top: 2px;
+    margin-bottom: 100px;
+  }
+  button {
+    text-align: center;
   }
 }

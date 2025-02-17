@@ -61,6 +61,32 @@
       </div>
       <section class="product_container"></section>
       <section class="review_container"></section>
+      <section class="add_review">
+        <h4>Add a Review</h4>
+        <div class="grid_review_form">
+          <form id="reviewForm">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="rating">Rating:</label>
+              <select id="rating" required>
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="2">2 Stars</option>
+                <option value="1">1 Star</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="comment">Comment:</label>
+              <textarea id="comment" required></textarea>
+            </div>
+            <button type="submit">Submit Review</button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer>
       <section class="footer-info">
