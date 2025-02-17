@@ -24,6 +24,9 @@ body {
   background-color: var(--background-color);
   color: var(--main-font);
 }
+.main {
+  margin-bottom: 20px;
+}
 .basket_button {
   background-color: #e28b49;
   color: #fceae1;
@@ -74,6 +77,11 @@ h3 {
 .fixed-icon {
   visibility: hidden;
   height: 0px;
+}
+.rating img {
+  width: 25px;
+  height: 25px;
+  padding-right: 5px;
 }
 @media (width > 768px) {
   .grid_pic_text {
@@ -139,9 +147,10 @@ h3 {
     width: 250px;
   }
   .review_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
+    display: flex;
     gap: 10px;
+  }
+  .main {
+    border: #8f685c solid 2px;
   }
 }

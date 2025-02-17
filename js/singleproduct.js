@@ -31,7 +31,8 @@ function showProduct(data) {
             </div>
         </div>
         <div class="divider"></div>
-            <img class=class="divider_768px" src="assets/img/greenLineNoText.svg" alt="Green Path" />
+
+            <img class="divider_768px" src="assets/img/greenLineNoText.svg" alt="Green Path" />
         
         <h3>Reviews</h3>`;
 
@@ -44,7 +45,7 @@ function showProduct(data) {
     html += `
             <div class="review">
                 <div class="review-header">
-                <div class="rating">${"⭐".repeat(review.rating)}</div>
+                <div class="rating">${starImage}</div>
                     <p class="reviewer-name">${review.reviewerName}</p>
                 <p class="review-comment">${review.comment}</p>
                 <p class="review-date">${new Date(
