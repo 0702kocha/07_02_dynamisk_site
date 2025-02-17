@@ -24,18 +24,6 @@ main {
 }
 
 @media (max-width: 768px) {
-  .forsidebillede {
-    width: 100%; /* Fylder hele bredden af skærmen */
-    height: 100%; /* Juster højden - kan ændres efter behov */
-    display: block;
-    position: absolute; /* Placerer billedet præcist */
-    top: -80px; /* Sørger for, at det ligger øverst */
-    left: 0;
-    object-fit: cover; /* Sikrer, at billedet beskæres korrekt */
-    transform: rotate(-90deg);
-    z-index: -1; /* Placerer det bag andre elementer, hvis nødvendigt */
-  }
-
   h1 {
     color: #f06a41;
     font-family: "moret",  serif;
@@ -50,6 +38,10 @@ main {
     font-family: "moret",  serif;
     font-weight: 400;
     font-style: normal;
+  }
+
+  main {
+    margin-top: 210px;
   }
 
   h3 {
@@ -136,18 +128,6 @@ main {
 }
 
 @media (min-width: 768px) {
-  .forsidebillede {
-    width: 100vw; /* Fylder hele bredden af skærmen */
-    height: 200vh; /* Juster højden - kan ændres efter behov */
-    display: block;
-    position: absolute; /* Placerer billedet præcist */
-    top: -80px; /* Sørger for, at det ligger øverst */
-    left: 0;
-    object-fit: cover; /* Sikrer, at billedet beskæres korrekt */
-    transform: rotate(-90deg);
-    z-index: -1; /* Placerer det bag andre elementer, hvis nødvendigt */
-  }
-
   .icon-container {
     display: flex;
     justify-content: space-between;
