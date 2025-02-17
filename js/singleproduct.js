@@ -22,7 +22,18 @@ function showProduct(data) {
             <div class="product_info">
                 <h2 class="product_titel">${data.title}</h2>
                 <p>${data.brand}</p>
-                <p>$${data.price}</p>
+                <p class="price ${
+                  data.discountPercentage > 0 ? "discount-price IsOnSale" : ""
+                }">$${data.price}</p>
+   ${
+     data.discountPercentage > 0
+       ? `<p class="discount-price IsOnSale">Now ${
+           Math.floor(
+             (data.price * (1 - data.discountPercentage / 100)) / 0.5
+           ) * 0.5
+         } $</p>`
+       : ""
+   }
                 <button class="basket_button">Add to basket</button>
             </div>
             <div class="description_info">
