@@ -22,7 +22,7 @@ function showProduct(data) {
             <div class="product_info">
                 <h2 class="product_titel">${data.title}</h2>
                 <p>${data.brand}</p>
-                <p>${data.price}</p>
+                <p>$${data.price}</p>
                 <button class="basket_button">Add to basket</button>
             </div>
             <div class="description_info">
@@ -45,9 +45,8 @@ function showProduct(data) {
     html += `
             <div class="review">
                 <div class="review-header">
+                <div class="rating">${"⭐".repeat(review.rating)}</div>
                     <p class="reviewer-name">${review.reviewerName}</p>
-                    <div class="rating">${"⭐".repeat(review.rating)}</div>
-                </div>
                 <p class="review-comment">${review.comment}</p>
                 <p class="review-date">${new Date(
                   review.date

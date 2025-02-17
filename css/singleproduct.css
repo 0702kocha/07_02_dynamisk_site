@@ -100,7 +100,7 @@ h3 {
     grid-row: 3;
     grid-column: 1 / -1;
     max-width: 600px;
-    margin-left: 30px;
+    margin-left: 70px;
   }
   .divider {
     visibility: hidden;
@@ -135,5 +135,11 @@ h3 {
   .left-icon img,
   .right-icon img {
     width: 250px;
+  }
+  .review {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
   }
 }
