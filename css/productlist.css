@@ -152,15 +152,12 @@ p {
 }
 
 .filter-container {
+  width: 90%;
   display: flex;
   justify-content: flex-end;
 }
 
 .filter {
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end; 
-  margin-right: 160px;
   padding: 3px;
   color: var(--main-font);
   background-color: #e28b495b;
