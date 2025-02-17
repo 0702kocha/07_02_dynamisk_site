@@ -70,6 +70,10 @@ body {
 h3 {
   text-align: center;
 }
+.product_container {
+  margin-top: 20px;
+}
+
 #divider_768px {
   display: none;
 }
