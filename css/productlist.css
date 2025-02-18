@@ -156,6 +156,10 @@ p {
   border: 1px solid var(--red-orange-color);
 }
 
+label{
+  margin-right: 10px;
+}
+
 /* SOLD OUT */
 .sold-out {
   visibility: hidden;

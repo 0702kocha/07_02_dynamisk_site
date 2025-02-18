@@ -63,10 +63,15 @@
       <h1 class="product-category"></h1>
 
       <div class="filter-container">
-        <select class="filter">
-          <option value="low-to-high">Lowest to Highest</option>
-          <option value="high-to-low">Highest to Lowest</option>
-          <option value="under-10">Only under $10</option>
+        <label for="product-filter">Sorter:</label>
+        <select
+          id="product-filter"
+          class="filter"
+          aria-label="Sorteringsmuligheder"
+        >
+          <option value="low-to-high">Laveste til højeste pris</option>
+          <option value="high-to-low">Højeste til laveste pris</option>
+          <option value="under-10">Kun under 10 kr</option>
         </select>
       </div>
 
