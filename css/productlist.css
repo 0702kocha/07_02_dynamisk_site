@@ -1,19 +1,18 @@
-
 @font-face {
   font-family: "quicksand";
   src: url("../assets/font/Quicksand-Regular.woff2") format("woff2"),
-       url("../assets/font/Quicksand-Regular.woff") format("woff"),
-       url("../assets/font/Quicksand-Regular.ttf") format("truetype");  
+    url("../assets/font/Quicksand-Regular.woff") format("woff"),
+    url("../assets/font/Quicksand-Regular.ttf") format("truetype");
+  font-style: normal;
 }
-
 
 @font-face {
   font-family: "moret";
   src: url("../assets/font/Moret-Regular.woff2") format("woff2"),
-       url("../assets/font/Moret-Regular.woff") format("woff"),
-       url("../assets/font/Moret-Regular.otf") format("truetype");  
+    url("../assets/font/Moret-Regular.woff") format("woff"),
+    url("../assets/font/Moret-Regular.otf") format("truetype");
+  font-style: normal;
 }
-
 
 body {
   --background-color: #fceae1;
@@ -97,7 +96,7 @@ p {
   padding-left: 10px;
 }
 
-.product_link{
+.product_link {
   text-decoration: none;
   color: var(--main-font);
 }
@@ -113,36 +112,36 @@ p {
   color: var(--orange-color);
 }
 
-.fixed-icon{
+.fixed-icon {
   display: none;
 }
 
 @media (width > 768px) {
-.fixed-icon {
-  position: fixed;
-  opacity: 0.5; 
-  width: 50px; 
-  z-index: -1; 
-  display: block;
-}
+  .fixed-icon {
+    position: fixed;
+    opacity: 0.5;
+    width: 50px;
+    z-index: -1;
+    display: block;
+  }
 
-.left-icon {
-  top: 25%;
-  left: 50px; 
-  transform: rotate(-30deg);
-  width: 10px;
-}
+  .left-icon {
+    top: 25%;
+    left: 50px;
+    transform: rotate(-30deg);
+    width: 10px;
+  }
 
-.right-icon {
-  top: 50%;
-  right: 330px;
-  transform: rotate(10deg);
-}
+  .right-icon {
+    top: 50%;
+    right: 330px;
+    transform: rotate(10deg);
+  }
 
-.left-icon img,
-.right-icon img {
-  width: 350px;  
-}
+  .left-icon img,
+  .right-icon img {
+    width: 350px;
+  }
 }
 
 .filter-container {
@@ -179,7 +178,6 @@ p {
 .IsSoldOut {
   visibility: visible;
 }
-
 
 /* Discount */
 
@@ -224,5 +222,3 @@ p {
 .IsOnSale {
   visibility: visible;
 }
-
-
