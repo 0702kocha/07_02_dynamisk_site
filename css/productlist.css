@@ -4,7 +4,6 @@
   src: url("../assets/font/Quicksand-Regular.woff2") format("woff2"),
        url("../assets/font/Quicksand-Regular.woff") format("woff"),
        url("../assets/font/Quicksand-Regular.ttf") format("truetype");  
-  font-style: normal;
 }
 
 
@@ -13,7 +12,6 @@
   src: url("../assets/font/Moret-Regular.woff2") format("woff2"),
        url("../assets/font/Moret-Regular.woff") format("woff"),
        url("../assets/font/Moret-Regular.otf") format("truetype");  
-  font-style: normal;
 }
 
 
@@ -31,8 +29,6 @@ body {
 
 h1 {
   font-family: "moret", serif;
-  font-weight: 400;
-  font-style: normal;
   margin-top: 70px;
   color: var(--red-orange-color);
 }
@@ -71,7 +67,6 @@ p {
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 3;
-  gap: 0;
   border: 3px solid var(--red-orange-color);
   padding-left: 10px;
   padding-right: 10px;
@@ -80,7 +75,6 @@ p {
 
 .product_container img {
   width: 100%;
-  margin: 0;
 }
 
 .price {
@@ -225,7 +219,6 @@ p {
   font-size: 14px;
   padding: 5px 10px;
   border-radius: 5px;
-  font-family: quicksand;
 }
 
 .IsOnSale {
