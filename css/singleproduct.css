@@ -100,9 +100,11 @@ h3 {
 .product_container:has(.discount-price) .price::before {
   content: "Before ";
 }
-.IsOnSale {
-  visibility: visible;
+.review_container,
+.add_review {
+  margin-left: 10px;
 }
+
 @media (width > 768px) {
   .grid_pic_text {
     display: grid;
