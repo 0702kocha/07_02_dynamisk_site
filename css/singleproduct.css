@@ -104,6 +104,25 @@ h3 {
 .add_review {
   margin-left: 10px;
 }
+.add_review {
+  margin-bottom: 30px;
+}
+#rating,
+button {
+  padding: 3px;
+  color: var(--main-font);
+  background-color: #e28b495b;
+  border-radius: 5px;
+  border: 1px solid var(--red-orange-color);
+}
+#name,
+#comment {
+  padding: 3px;
+  color: var(--main-font);
+
+  border-radius: 5px;
+  border: 1px solid var(--red-orange-color);
+}
 
 @media (width > 768px) {
   .grid_pic_text {
